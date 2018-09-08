@@ -8,12 +8,12 @@
 
 #include "TimeTrackerApp.hpp"
 #include "HomeView.hpp"
-
-
+#include "HomeUI.h"
 
 
 bool TimeTrackerApp::OnInit() {
-    auto frame = new HomeView();
+    auto frame = new HomeUI(NULL);
+    
     frame->Show(true);
     return true;
 }

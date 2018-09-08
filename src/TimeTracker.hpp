@@ -20,6 +20,7 @@ public:
     void startTimeTracker();
     int stopTimeTracker();
     bool isTracking();
+    double timePassed();
 private:
     time_t startTime;
     time_t stopTime;

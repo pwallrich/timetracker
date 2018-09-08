@@ -22,6 +22,11 @@ int TimeTracker::stopTimeTracker() {
     stopTime = time(0);
     return 1;
 }
+
+double TimeTracker::timePassed() {
+    return difftime(time(0), startTime);
+}
+
 bool TimeTracker::isTracking() {
     return tracking;
 }

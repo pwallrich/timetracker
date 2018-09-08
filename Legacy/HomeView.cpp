@@ -17,7 +17,6 @@
 #include <wx/odcombo.h>
 #include <wx/valgen.h>
 
-#include "base.h"
 
 #define frameWidth 800
 #define frameHeight 600
