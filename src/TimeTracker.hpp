@@ -21,6 +21,8 @@ public:
     int stopTimeTracker();
     bool isTracking();
     double timePassed();
+    double getDuration();
+    time_t getStart();
 private:
     time_t startTime;
     time_t stopTime;

@@ -22,16 +22,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "src/HomeUI.cpp"
+            timestampString = "558063559.417038"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "HomeUI::HomeUI( wxWindow* parent, wxWindowID id, const wxString&amp; title, const wxPoint&amp; pos, const wxSize&amp; size, long style )"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/HomeUI.cpp"
-            timestampString = "558059025.02659"
+            timestampString = "558063559.417419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "HomeUI::HomeUI( wxWindow* parent, wxWindowID id, const wxString&amp; title, const wxPoint&amp; pos, const wxSize&amp; size, long style )"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "HomeUI::tabChanging(wxBookCtrlEvent &amp;event)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

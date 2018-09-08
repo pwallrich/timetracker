@@ -26,6 +26,10 @@
 #include <wx/grid.h>
 #include <wx/msgdlg.h>
 #include <wx/timer.h>
+#include <wx/textfile.h>
+#include <wx/filename.h>
+#include <wx/stdpaths.h>
+#include <wx/tokenzr.h>
 
 #include "TimeTracker.hpp"
 #include <string>
@@ -43,6 +47,12 @@ class HomeUI : public wxFrame
         TimeTracker tracker;
         void onTimer(wxTimerEvent& event);
         char* formatSeconds(int seconds);
+    void saveToFile();
+    char* parseEntryToString(double duration, time_t start);
+    void loadAndDisplayData();
+
+    wxString fileDir;
+    wxString fileName;
 
 	protected:
 		wxNotebook* m_notebook1;
@@ -54,6 +64,7 @@ class HomeUI : public wxFrame
         wxTimer* timer;
 
         void toggleClicked( wxCommandEvent& event );
+    void tabChanging(wxBookCtrlEvent& event);
 
 
 	public:

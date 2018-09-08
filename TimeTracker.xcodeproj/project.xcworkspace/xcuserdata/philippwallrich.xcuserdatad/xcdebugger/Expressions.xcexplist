@@ -3,10 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "HomeUI::tabChanging(wxBookCtrlEvent&amp;):HomeUI.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "event.GetSelection()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "HomeView::HomeView():HomeView.cpp">
          <PersistentStrings>
             <PersistentString
                value = "BUTTON_Hello">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HomeUI::tabChanging(wxCommandEvent&amp;):HomeUI.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "event.GetSelection()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

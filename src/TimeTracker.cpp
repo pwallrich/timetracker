@@ -30,3 +30,15 @@ double TimeTracker::timePassed() {
 bool TimeTracker::isTracking() {
     return tracking;
 }
+
+double TimeTracker::getDuration() {
+    if (tracking) {
+        return -1;
+    } else {
+        return difftime(stopTime, startTime);
+    }
+}
+
+time_t TimeTracker::getStart() {
+    return startTime;
+}
