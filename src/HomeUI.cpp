@@ -52,9 +52,14 @@ HomeUI::HomeUI( wxWindow* parent, wxWindowID id, const wxString& title, const wx
 	m_panel2 = new wxPanel( m_notebook1, ID_panel2, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL );
 	m_notebook1->AddPage( m_panel2, wxT("History"), false );
     
-    grid = new wxGrid(m_panel2, ID_grid, wxPoint(0,0), wxSize(400,300));
+    grid = new wxGrid(m_panel2, ID_grid, wxPoint(0,0), size);
     grid->CreateGrid( 0, 2 );
-    
+    auto colSize = size.GetWidth() / 4 - 20;
+    grid->SetColSize(0, colSize);
+    grid->SetColSize(1, colSize * 3);
+    grid->SetDefaultColSize(colSize);
+    grid->SetColLabelValue(0, "Time");
+    grid->SetColLabelValue(1, "Date");
 
 	bSizer6->Add( m_notebook1, 1, wxEXPAND | wxALL, 5 );
 
