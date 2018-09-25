@@ -158,8 +158,8 @@ void HomeUI::loadAndDisplayData() {
         wxString str = tfile.GetLine(i);
         wxStringTokenizer tokenizer(str, ";");
 
-        grid->SetCellValue(i, 0, tokenizer.GetNextToken());
-        grid->SetCellValue(i, 1, tokenizer.GetNextToken());
+        grid->SetCellValue(i, 0, updateTimeLabel(tokenizer.GetNextToken()));
+        grid->SetCellValue(i, 1, updateStartDate(tokenizer.GetNextToken()));
 
     }
 
@@ -170,3 +170,116 @@ void HomeUI::onTimer(wxTimerEvent& event) {
     char* secondsString = formatSeconds(seconds);
     timeLabel->SetLabel(secondsString);
 }
+
+// MARK: display update calculations
+
+
+/// update Label containing Duration
+wxString HomeUI::updateTimeLabel(wxString secondsToken) {
+    wxString res = "";
+    int duration = wxAtoi(secondsToken);
+    // calculate hours, minuntes, seconds from input secondsTokenn
+
+    for ( int i = 3600; i >=60; i /= 60) {
+        res += wxString::Format(wxT("%02d:"), duration / i);
+        duration %=  i;
+    }
+    res += wxString::Format(wxT("%02d"), duration);
+
+    return res;
+}
+
+
+wxString getWeekday(tm* startDate) {
+    int weekday = startDate->tm_wday;
+    wxString res;
+    switch (weekday) {
+        case 0:
+            res = "Sonntag";
+            break;
+        case 1:
+            res = "Montag";
+            break;
+        case 2:
+            res = "Dienstag";
+            break;
+        case 3:
+            res = "Mittwoch";
+            break;
+        case 4:
+            res = "Donnerstag";
+            break;
+        case 5:
+            res = "Freitag";
+            break;
+        case 6:
+            res = "Samstag";
+            break;
+        default:
+            res = "Error!";
+            break;
+    }
+
+    return res;
+}
+
+wxString getMonth(tm* startDate) {
+    int month = startDate->tm_mon;
+    wxString res;
+    switch (month) {
+        case 0:
+            res = "Januar";
+            break;
+        case 1:
+            res = "Februar";
+            break;
+        case 2:
+            res = "März";
+            break;
+        case 3:
+            res = "April";
+            break;
+        case 4:
+            res = "Mai";
+            break;
+        case 5:
+            res = "Juni";
+            break;
+        case 6:
+            res = "Juli";
+            break;
+        case 7:
+            res = "August";
+            break;
+        case 8:
+            res = "September";
+            break;
+        case 9:
+            res = "Oktober";
+            break;
+        case 10:
+            res = "November";
+            break;
+        case 11:
+            res = "Dezember";
+            break;
+        default:
+            res = "Error!";
+            break;
+    }
+
+    return res;
+}
+/// update Label containing start Date
+wxString HomeUI::updateStartDate(wxString dateInSecondsSinceEpoch) {
+    long epoch = wxAtol(dateInSecondsSinceEpoch);
+    // get time from epoch
+    tm* startDate = localtime(&epoch);
+    wxString weekday = getWeekday(startDate);
+    wxString month = getMonth(startDate);
+    // Montag 01 August 2018 19:51:01
+    return wxString::Format(wxT("%s %02d %s %02d %02d:%02d:%02d"), weekday, startDate->tm_mday, month, startDate->tm_year + 1900, startDate->tm_hour, startDate->tm_min, startDate->tm_sec);
+}
+
+
+

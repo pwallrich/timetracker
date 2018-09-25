@@ -8,12 +8,22 @@
 
 #include "TimeTrackerApp.hpp"
 #include "HomeView.hpp"
-#include "HomeUI.h"
 
 
 bool TimeTrackerApp::OnInit() {
-    auto frame = new HomeUI(NULL);
-    
-    frame->Show(true);
+    homeView = new HomeUI(NULL);
+    homeView->Show(true);
     return true;
+}
+
+void TimeTrackerApp::toggleClicked() {
+    printf("toggle clicked");
+}
+
+void TimeTrackerApp::exitClicked() {
+    printf("exit clicked");
+}
+
+void TimeTrackerApp::openedList() {
+    
 }

@@ -12,6 +12,8 @@
 		270136522142CFA400017F9D /* TimeTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2701364A2142CFA400017F9D /* TimeTracker.cpp */; };
 		270136542142CFA400017F9D /* TimeTrackerApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2701364F2142CFA400017F9D /* TimeTrackerApp.cpp */; };
 		2746C79B2142EC1200CEB79F /* HomeUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2746C79A2142EC1200CEB79F /* HomeUI.cpp */; };
+		2746C7A32144025600CEB79F /* DataHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2746C7A12144025600CEB79F /* DataHandler.cpp */; };
+		2746C7A92144099100CEB79F /* HomeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2746C7A72144099100CEB79F /* HomeController.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +39,11 @@
 		2701364F2142CFA400017F9D /* TimeTrackerApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeTrackerApp.cpp; sourceTree = "<group>"; };
 		2746C7992142EC1200CEB79F /* HomeUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeUI.h; sourceTree = "<group>"; };
 		2746C79A2142EC1200CEB79F /* HomeUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HomeUI.cpp; sourceTree = "<group>"; };
+		2746C7A12144025600CEB79F /* DataHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataHandler.cpp; sourceTree = "<group>"; };
+		2746C7A22144025600CEB79F /* DataHandler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataHandler.hpp; sourceTree = "<group>"; };
+		2746C7A52144041400CEB79F /* TimeEntry.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TimeEntry.hpp; sourceTree = "<group>"; };
+		2746C7A72144099100CEB79F /* HomeController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HomeController.cpp; sourceTree = "<group>"; };
+		2746C7A82144099100CEB79F /* HomeController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HomeController.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +84,11 @@
 				2701364E2142CFA400017F9D /* TimeTracker.hpp */,
 				2701364F2142CFA400017F9D /* TimeTrackerApp.cpp */,
 				2701364C2142CFA400017F9D /* TimeTrackerApp.hpp */,
+				2746C7A12144025600CEB79F /* DataHandler.cpp */,
+				2746C7A22144025600CEB79F /* DataHandler.hpp */,
+				2746C7A52144041400CEB79F /* TimeEntry.hpp */,
+				2746C7A72144099100CEB79F /* HomeController.cpp */,
+				2746C7A82144099100CEB79F /* HomeController.hpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -159,6 +171,8 @@
 			files = (
 				270136502142CFA400017F9D /* main.cpp in Sources */,
 				270136522142CFA400017F9D /* TimeTracker.cpp in Sources */,
+				2746C7A32144025600CEB79F /* DataHandler.cpp in Sources */,
+				2746C7A92144099100CEB79F /* HomeController.cpp in Sources */,
 				2746C79B2142EC1200CEB79F /* HomeUI.cpp in Sources */,
 				270136512142CFA400017F9D /* HomeView.cpp in Sources */,
 				270136542142CFA400017F9D /* TimeTrackerApp.cpp in Sources */,

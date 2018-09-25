@@ -11,9 +11,18 @@
 #include <wx/wx.h>
 #endif
 
+#include "HomeUI.h"
+
 
 class TimeTrackerApp: public wxApp
 {
 public:
     virtual bool OnInit() override;
+
+    void toggleClicked();
+    void exitClicked();
+    void openedList();
+
+private:
+    HomeUI* homeView;
 };

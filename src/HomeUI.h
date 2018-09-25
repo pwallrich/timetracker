@@ -47,6 +47,9 @@ class HomeUI : public wxFrame
         TimeTracker tracker;
         void onTimer(wxTimerEvent& event);
         char* formatSeconds(int seconds);
+        void updateTimeLabel(int seconds);
+        wxString updateTimeLabel(wxString secondsToken);
+        wxString updateStartDate(wxString dateInSecondsSinceEpoch);
     void saveToFile();
     char* parseEntryToString(double duration, time_t start);
     void loadAndDisplayData();
